@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Zhigang Wu | Academic Homepage</title>
+  <title>武智刚 | 学术主页</title>
   <style>
     :root {
       --bg: #f7f9fc;
@@ -14,37 +14,29 @@
       --accent: #1d4ed8;
       --accent-soft: #dbeafe;
       --shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
-      --maxw: 1060px;
+      --maxw: 1120px;
     }
-
     * { box-sizing: border-box; }
-
     html { scroll-behavior: smooth; }
-
     body {
       margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB",
+        "Microsoft YaHei", "Noto Sans CJK SC", Roboto, Helvetica, Arial, sans-serif;
       background: var(--bg);
       color: var(--text);
-      line-height: 1.65;
+      line-height: 1.72;
     }
-
-    a {
-      color: var(--accent);
-      text-decoration: none;
-    }
-
+    a { color: var(--accent); text-decoration: none; }
     a:hover { text-decoration: underline; }
 
     .nav {
       position: sticky;
       top: 0;
-      z-index: 10;
-      background: rgba(247, 249, 252, 0.92);
+      z-index: 20;
+      background: rgba(247, 249, 252, 0.94);
       backdrop-filter: blur(10px);
       border-bottom: 1px solid var(--line);
     }
-
     .nav-inner {
       max-width: var(--maxw);
       margin: 0 auto;
@@ -54,12 +46,11 @@
       justify-content: space-between;
       gap: 16px;
     }
-
     .brand {
       font-weight: 700;
       letter-spacing: 0.2px;
+      font-size: 18px;
     }
-
     .menu {
       display: flex;
       flex-wrap: wrap;
@@ -72,33 +63,21 @@
       margin: 0 auto;
       padding: 28px 22px 64px;
     }
-
     .hero {
       display: grid;
-      grid-template-columns: 1.35fr 0.9fr;
+      grid-template-columns: 1.25fr 0.9fr;
       gap: 26px;
       align-items: stretch;
       margin-top: 18px;
     }
-
     .card {
       background: var(--card);
       border: 1px solid var(--line);
       border-radius: 22px;
       box-shadow: var(--shadow);
     }
-
-    .hero-main {
-      padding: 34px;
-    }
-
-    .hero-side {
-      padding: 28px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-
+    .hero-main { padding: 34px; }
+    .hero-side { padding: 24px; display: flex; align-items: center; justify-content: center; }
     .eyebrow {
       display: inline-block;
       padding: 6px 10px;
@@ -109,31 +88,26 @@
       font-weight: 600;
       margin-bottom: 14px;
     }
-
     h1 {
-      margin: 0 0 8px;
+      margin: 0 0 10px;
       font-size: 40px;
       line-height: 1.15;
     }
-
     .subtitle {
-      font-size: 18px;
+      font-size: 20px;
       color: var(--muted);
-      margin-bottom: 16px;
+      margin-bottom: 14px;
     }
-
     .lead {
       font-size: 16px;
       margin: 0 0 18px;
     }
-
     .btns {
       display: flex;
       flex-wrap: wrap;
       gap: 12px;
-      margin-top: 16px;
+      margin-top: 18px;
     }
-
     .btn {
       display: inline-flex;
       align-items: center;
@@ -146,62 +120,44 @@
       font-weight: 600;
       font-size: 14px;
     }
-
     .btn.primary {
       background: var(--accent);
       border-color: var(--accent);
       color: #fff;
     }
 
-    .facts {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 14px;
-      margin-top: 10px;
+    .portrait-wrap {
+      width: 100%;
+      max-width: 360px;
     }
-
-    .fact {
-      padding: 14px;
-      border-radius: 16px;
-      background: #f8fafc;
+    .portrait {
+      width: 100%;
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+      border-radius: 20px;
       border: 1px solid var(--line);
-    }
-
-    .fact-label {
-      font-size: 12px;
-      color: var(--muted);
-      text-transform: uppercase;
-      letter-spacing: 0.4px;
-      margin-bottom: 4px;
-    }
-
-    .fact-value {
-      font-size: 15px;
-      font-weight: 600;
+      box-shadow: 0 12px 30px rgba(15, 23, 42, 0.10);
+      display: block;
     }
 
     .section {
       margin-top: 26px;
       padding: 28px;
     }
-
     h2 {
       margin: 0 0 16px;
       font-size: 24px;
     }
-
     .grid-2 {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 22px;
     }
-
     .chips {
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
     }
-
     .chip {
       padding: 8px 12px;
       border-radius: 999px;
@@ -209,42 +165,36 @@
       background: #f8fafc;
       font-size: 14px;
     }
-
     .item {
       padding: 16px 0;
       border-top: 1px solid var(--line);
     }
-
-    .item:first-child { border-top: none; padding-top: 4px; }
-
+    .item:first-child {
+      border-top: none;
+      padding-top: 4px;
+    }
     .item-title {
       font-weight: 700;
       margin-bottom: 4px;
     }
-
     .item-meta {
       color: var(--muted);
       font-size: 14px;
       margin-bottom: 6px;
     }
-
     .pub-title {
       font-weight: 700;
       margin-bottom: 6px;
     }
-
     .pub-meta {
       color: var(--muted);
       font-size: 14px;
     }
-
     ul.compact {
       margin: 10px 0 0 18px;
       padding: 0;
     }
-
     ul.compact li { margin-bottom: 8px; }
-
     .footer {
       text-align: center;
       color: var(--muted);
@@ -254,27 +204,26 @@
     }
 
     @media (max-width: 900px) {
-      .hero, .grid-2 {
-        grid-template-columns: 1fr;
-      }
-
+      .hero, .grid-2 { grid-template-columns: 1fr; }
       h1 { font-size: 32px; }
       .hero-main, .hero-side, .section { padding: 22px; }
+      .portrait-wrap { max-width: 300px; }
     }
   </style>
 </head>
 <body>
   <nav class="nav">
     <div class="nav-inner">
-      <div class="brand">Zhigang Wu</div>
+      <div class="brand">武智刚</div>
       <div class="menu">
-        <a href="#about">About</a>
-        <a href="#education">Education</a>
-        <a href="#publications">Publications</a>
-        <a href="#projects">Projects</a>
-        <a href="#awards">Awards</a>
-        <a href="#service">Service</a>
-        <a href="#contact">Contact</a>
+        <a href="#about">个人简介</a>
+        <a href="#education">教育经历</a>
+        <a href="#publications">论文成果</a>
+        <a href="#projects">科研项目</a>
+        <a href="#patents">发明专利</a>
+        <a href="#awards">学术奖励</a>
+        <a href="#service">学术服务</a>
+        <a href="#contact">联系方式</a>
       </div>
     </div>
   </nav>
@@ -282,103 +231,80 @@
   <main class="wrap">
     <section class="hero">
       <div class="card hero-main">
-        <div class="eyebrow">Academic Homepage</div>
-        <h1>Zhigang Wu</h1>
-        <div class="subtitle">PhD Candidate in Intelligent Transportation Engineering, Sun Yat-sen University</div>
+        <div class="eyebrow">学术主页</div>
+        <h1>武智刚</h1>
+        <div class="subtitle">中山大学计算机科学与技术（智能交通工程）博士研究生</div>
         <p class="lead">
-          I work on autonomous transportation systems, intelligent connected multi-vehicle cooperative planning and control,
-          and vehicle-road collaborative computing and decision optimization. My recent research focuses on autonomous
-          intersection management, traffic-communication coupled control, and cooperative control in mixed traffic systems.
+          研究方向包括自主式交通系统管理与控制、智能网联多车协同规划控制，以及车路协同计算与决策优化。
+          近期主要围绕自主式交叉口管理、交通-通信耦合控制、异智混驾环境下的协同控制与车路云协同计算开展研究。
         </p>
         <div class="btns">
-          <a class="btn primary" href="mailto:wuzhg6@mail2.sysu.edu.cn">Email</a>
-          <a class="btn" href="https://scholar.google.com/citations?hl=zh-CN&user=bkIPWh4AAAAJ" target="_blank">Google Scholar</a>
-          <a class="btn" href="#publications">Selected Publications</a>
+          <a class="btn primary" href="mailto:wuzhg6@mail2.sysu.edu.cn">电子邮箱</a>
+          <a class="btn" href="https://scholar.google.com/citations?hl=zh-CN&user=bkIPWh4AAAAJ" target="_blank">谷歌学术</a>
+          <a class="btn" href="#publications">代表性论文</a>
         </div>
       </div>
 
       <aside class="card hero-side">
-        <div>
-          <h2 style="margin-top:0;">Quick Facts</h2>
-          <div class="facts">
-            <div class="fact">
-              <div class="fact-label">Graduation</div>
-              <div class="fact-value">June 2026</div>
-            </div>
-            <div class="fact">
-              <div class="fact-label">Birth</div>
-              <div class="fact-value">Oct 1995</div>
-            </div>
-            <div class="fact">
-              <div class="fact-label">Phone / WeChat</div>
-              <div class="fact-value">183 9200 3209</div>
-            </div>
-            <div class="fact">
-              <div class="fact-label">Political Status</div>
-              <div class="fact-value">CPC Member</div>
-            </div>
-          </div>
-        </div>
-        <div style="margin-top:18px; color: var(--muted); font-size: 14px;">
-          Visiting Research Experience at City University of Hong Kong (Dec 2025 – May 2026), collaborating with Prof. Andy H. F. Chow.
+        <div class="portrait-wrap">
+          <img class="portrait" src="profile.png" alt="武智刚证件照" />
         </div>
       </aside>
     </section>
 
     <section class="card section" id="about">
-      <h2>About</h2>
+      <h2>个人简介</h2>
       <p>
-        I am a PhD candidate at Sun Yat-sen University. My research lies at the intersection of transportation engineering,
-        intelligent transportation systems, and connected autonomous mobility. I am particularly interested in how traffic flow,
-        communication networking, and distributed computation can be jointly optimized to support autonomous intersection management
-        and large-scale vehicle-road-cloud cooperative systems.
+        我现为中山大学智能交通工程方向博士研究生，预计于 2026 年 6 月毕业。
+        研究工作聚焦自主式交通系统与智能网联交叉领域。
+        研究主题主要包括交通-通信耦合仿真与优化、车路协同计算与控制等。
       </p>
       <div class="chips" style="margin-top: 14px;">
-        <span class="chip">Autonomous Transportation Systems</span>
-        <span class="chip">Connected and Autonomous Vehicles</span>
-        <span class="chip">Autonomous Intersection Management</span>
-        <span class="chip">Traffic-Communication Coupled Control</span>
-        <span class="chip">Vehicle-Road Collaborative Computing</span>
+        <span class="chip">自主式交通系统</span>
+        <span class="chip">智能网联车辆</span>
+        <span class="chip">交通-通信耦合控制</span>
+        <span class="chip">车路协同计算</span>
       </div>
     </section>
 
     <section class="grid-2">
       <div class="card section" id="education">
-        <h2>Education</h2>
+        <h2>教育经历</h2>
         <div class="item">
-          <div class="item-title">Sun Yat-sen University</div>
-          <div class="item-meta">PhD in Computer Science and Technology (Intelligent Transportation Engineering), Sep 2022 – Jun 2026</div>
-          <div>Supervisor: Prof. Zhaocheng He</div>
+          <div class="item-title">中山大学</div>
+          <div class="item-meta">计算机科学与技术（智能交通工程） · 博士 · 2022.09 – 2026.06</div>
+          <div>导师：何兆成 教授</div>
         </div>
         <div class="item">
-          <div class="item-title">City University of Hong Kong</div>
-          <div class="item-meta">Visiting Research, Systems Engineering, Dec 2025 – May 2026</div>
-          <div>Collaborating Supervisor: Prof. Andy H. F. Chow</div>
+          <div class="item-title">香港城市大学</div>
+          <div class="item-meta">系统工程 · 访问学习 · 2025.12 – 2026.05</div>
+          <div>合作导师：Andy H. F. Chow 教授</div>
         </div>
         <div class="item">
-          <div class="item-title">Chang'an University</div>
-          <div class="item-meta">MSc in Transportation Engineering, Sep 2019 – Jun 2022</div>
+          <div class="item-title">长安大学</div>
+          <div class="item-meta">交通运输工程 · 硕士 · 2019.09 – 2022.06</div>
+          <div>合作导师：孙启鹏 教授</div>
         </div>
         <div class="item">
-          <div class="item-title">Chang'an University</div>
-          <div class="item-meta">BEng in Electrical Engineering and Automation, Sep 2014 – Jun 2018</div>
+          <div class="item-title">长安大学</div>
+          <div class="item-meta">电气工程及其自动化 · 学士 · 2014.09 – 2018.06</div>
         </div>
       </div>
 
       <div class="card section">
-        <h2>Profile Summary</h2>
+        <h2>概况</h2>
         <ul class="compact">
-          <li>17 publications during PhD study, including 7 first-author or corresponding-author papers.</li>
-          <li>Published in leading venues such as <em>Transportation Research Part C</em>, <em>IEEE TITS</em>, <em>ESWA</em>, and <em>Accident Analysis &amp; Prevention</em>.</li>
-          <li>Mainly involved in national key R&amp;D, NSFC key joint projects, Shenzhen research projects, and university-industry collaborative programs.</li>
-          <li>Reviewer for journals and conferences in transportation, robotics, control, and intelligent systems.</li>
+          <li>共发表论文 20 篇，其中第一作者或通讯作者论文 7 篇。</li>
+          <li>代表性成果发表于 <em>TRC</em>、<em>IEEE TITS</em>、<em>ESWA</em>、<em>AAP</em> 等期刊。</li>
+          <li>参与国家重点研发计划、国家自然科学基金重点项目、深圳市科研项目及校企合作项目。</li>
+          <li>担任交通、控制相关领域期刊和会议审稿人。</li>
         </ul>
       </div>
     </section>
 
     <section class="card section" id="publications">
-      <h2>Selected Publications</h2>
-      <p style="margin-top:0; color: var(--muted);">First-author or corresponding-author papers</p>
+      <h2>代表性论文</h2>
+      <p style="margin-top:0; color: var(--muted);">第一作者 / 通讯作者论文</p>
 
       <div class="item">
         <div class="pub-title">T3C: A Traffic-Communication Coupling Control Approach for Autonomous Intersection Management System</div>
@@ -411,88 +337,87 @@
     </section>
 
     <section class="grid-2">
-      <div class="card section">
-        <h2>Patents</h2>
+      <div class="card section" id="patents">
+        <h2>发明专利</h2>
         <div class="item">
-          <div class="item-title">Communication Networking Method and System for Autonomous Intersection Management</div>
-          <div class="item-meta">Zhigang Wu, Zhaocheng He, Qinghai Lin, Jiyu Wang</div>
-          <div>Patent No. ZL202311807071.8 · Authorized on Jun 20, 2025</div>
+          <div class="item-title">一种面向自主式交叉口管理的通信组网方法及系统</div>
+          <div class="item-meta">武智刚，何兆成，蔺庆海，王纪禹</div>
+          <div>专利号：ZL202311807071.8 · 授权日：2025.06.20</div>
         </div>
         <div class="item">
-          <div class="item-title">Joint Optimization Method and System for Communication Networking and Vehicle Trajectories at Autonomous Intersections</div>
-          <div class="item-meta">Zhigang Wu, Zhaocheng He, Jiyu Wang, Huanting Xu</div>
-          <div>Patent No. ZL202411032150.0 · Authorized on Feb 28, 2025</div>
+          <div class="item-title">一种自主式交叉口通信组网与车辆轨迹联合优化方法及系统</div>
+          <div class="item-meta">武智刚，何兆成，王纪禹，许焕挺</div>
+          <div>专利号：ZL202411032150.0 · 授权日：2025.02.28</div>
         </div>
         <div class="item">
-          <div class="item-title">Method and System for Estimating Pedestrian and Non-Motorized Crossing Flow at Urban Intersections</div>
-          <div class="item-meta">Yiting Zhu, Zhaocheng He, Xinshao Zhang, Huanting Xu, Zhigang Wu, Wanting Chen</div>
-          <div>Application No. 202310665389.0 · Publicly disclosed</div>
+          <div class="item-title">自动驾驶车辆轨迹规划方法、装置、电子设备及存储介质</div>
+          <div class="item-meta">孙启鹏，武智刚，曹宁博，杜婷竺，马飞</div>
+          <div>专利号：ZL202111355844.4 · 授权日：2021.11.16</div>
         </div>
       </div>
 
       <div class="card section" id="awards">
-        <h2>Awards</h2>
+        <h2>学术奖励</h2>
         <div class="item">
-          <div class="item-title">On-site Academic Presentation, World Transport Convention (WTC)</div>
-          <div class="item-meta">Suzhou, 2025</div>
+          <div class="item-title">世界交通运输大会（WTC）现场学术报告</div>
+          <div class="item-meta">苏州，2025</div>
         </div>
         <div class="item">
-          <div class="item-title">Third Prize, International Doctoral Academic Forum in Transportation</div>
-          <div class="item-meta">Weihai, 2025</div>
+          <div class="item-title">交通运输学科国际博士生学术论坛三等奖</div>
+          <div class="item-meta">威海，2025</div>
         </div>
       </div>
     </section>
 
     <section class="card section" id="projects">
-      <h2>Research Projects</h2>
+      <h2>科研项目</h2>
       <div class="item">
-        <div class="item-title">National Key R&amp;D Program of China: “Computing Technologies for Autonomous Transportation Systems”</div>
-        <div class="item-meta">Subproject 3: “Road-Vehicle Collaborative Computing and Cascade Control for Heterogeneous Intelligent Traffic Flow” · Dec 2023 – Nov 2026</div>
-        <div>Major participant and project liaison. Responsible for proposal drafting and presentation materials. Focused on particle-flow collaborative control based on edge-end computing and intersection-oriented multi-vehicle cooperative control algorithms.</div>
+        <div class="item-title">国家重点研发计划项目“自主式交通系统计算技术”</div>
+        <div class="item-meta">课题三“异智交通流路车协同计算与级联控制” · 2023.12 – 2026.11</div>
       </div>
       <div class="item">
-        <div class="item-title">NSFC Joint Fund Key Project: “Theory and Methods of Intelligent Traffic Signal Control for Next-Generation Vehicle-Road Collaboration”</div>
-        <div class="item-meta">Jan 2022 – Dec 2025</div>
-        <div>Major participant. Responsible for annual/final reports and presentation materials, with research on traffic-communication network coupled control and periodic roadside intervention strategies for communication topology optimization.</div>
+        <div class="item-title">国家自然科学基金-联合基金重点项目</div>
+        <div class="item-meta">“面向新一代车路协同的交通信号智能控制理论与方法研究” · 2022.01 – 2025.12</div>
       </div>
       <div class="item">
-        <div class="item-title">Shenzhen Basic Research Project: “Fundamental Theories and Methods of Vehicle-Road Computing-Communication-Control Collaboration in Heterogeneous Intelligent Networked Environments”</div>
-        <div class="item-meta">Nov 2024 – Nov 2027</div>
-        <div>Major participant. Independently drafted the project proposal. Focused on communication/computing resource allocation and infrastructure deployment optimization for traffic management demands.</div>
+        <div class="item-title">深圳市基础研究专项（自然科学基金）面上项目</div>
+        <div class="item-meta">“异智网联环境下车路通算控协同基础理论与方法研究” · 2024.11 – 2027.11</div>
       </div>
       <div class="item">
-        <div class="item-title">Shenzhen Key Industrial R&amp;D Program: “Edge-Intelligent Perception and Cooperative Decision-Making at Holographic Intersections Based on Lightweight On-Device Models”</div>
-        <div class="item-meta">Jan 2026 – Dec 2028</div>
-        <div>Participant. Worked on proposal writing and coordination, with a focus on roadside-vehicle cooperative fast-slow response mechanisms and expert-knowledge-embedded online decision frameworks.</div>
+        <div class="item-title">深圳市重点产业研发计划项目</div>
+        <div class="item-meta">“基于端侧轻量化模型的全息路口边缘智能感知与协同决策关键技术研发” · 2026.01 – 2028.12</div>
       </div>
       <div class="item">
-        <div class="item-title">Huawei–Sun Yat-sen University Joint Innovation Lab Project: “Perception Layout and Control Strategy for Urban Holographic Intersections”</div>
-        <div class="item-meta">Aug 2022 – Jun 2023</div>
-        <div>Participant. Focused on mining traffic participant behavior patterns from disordered holographic trajectory data.</div>
+        <div class="item-title">华为-中山大学联合创新实验室项目</div>
+        <div class="item-meta">“城市全息交叉口感知布局与控制策略” · 2022.08 – 2023.06</div>
       </div>
     </section>
 
     <section class="card section" id="service">
-      <h2>Academic Service</h2>
+      <h2>学术服务</h2>
       <p>
-        Reviewer for <em>IEEE Transactions on Intelligent Transportation Systems</em>, <em>IEEE Transactions on Vehicular Technology</em>,
-        <em>International Journal of Mechanical Sciences</em>, <em>Expert Systems With Applications</em>,
-        <em>Aerospace Science and Technology</em>, <em>Scientific Data</em>, <em>ISA Transactions</em>,
-        <em>Robotics and Autonomous Systems</em>, as well as conferences including <em>IEEE ITSC</em> and <em>IEEE IV</em>.
+        担任 <em>IEEE Transactions on Intelligent Transportation Systems</em>、
+        <em>IEEE Transactions on Vehicular Technology</em>、
+        <em>International Journal of Mechanical Sciences</em>、
+        <em>Expert Systems With Applications</em>、
+        <em>Aerospace Science and Technology</em>、
+        <em>Scientific Data</em>、
+        <em>ISA Transactions</em>、
+        <em>Robotics and Autonomous Systems</em> 等期刊，
+        以及 <em>IEEE ITSC</em>、<em>IEEE IV</em>、<em>NeurIPS</em> 等会议审稿人。
       </p>
     </section>
 
     <section class="card section" id="contact">
-      <h2>Contact</h2>
+      <h2>联系方式</h2>
       <div class="item" style="padding-bottom: 4px;">
-        <div><strong>Email:</strong> <a href="mailto:wuzhg6@mail2.sysu.edu.cn">wuzhg6@mail2.sysu.edu.cn</a></div>
-        <div><strong>Phone / WeChat:</strong> 183 9200 3209</div>
-        <div><strong>Google Scholar:</strong> <a href="https://scholar.google.com/citations?hl=zh-CN&user=bkIPWh4AAAAJ" target="_blank">Scholar Profile</a></div>
+        <div><strong>电子邮箱：</strong><a href="mailto:wuzhg6@mail2.sysu.edu.cn">wuzhg6@mail2.sysu.edu.cn</a></div>
+        <div><strong>谷歌学术：</strong><a href="https://scholar.google.com/citations?hl=zh-CN&user=bkIPWh4AAAAJ" target="_blank">Scholar Profile</a></div>
       </div>
     </section>
 
     <div class="footer">
-      © 2026 Zhigang Wu · Built as a simple academic homepage.
+      © 2026 武智刚 · Academic Homepage
     </div>
   </main>
 </body>
